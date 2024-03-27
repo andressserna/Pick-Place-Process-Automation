@@ -1,5 +1,5 @@
 # Pick-Place-Process-Automation
-# Proyecto_final_Robotica
+
 Integrantes
 
 Juan Barrera, Theylor Amaya, Andrés Serna, Nicolas Guio, Daniel Segura, Juan Pablo Ortiz 
