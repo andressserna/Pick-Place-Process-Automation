@@ -19,7 +19,7 @@ Juan Barrera, Theylor Amaya, Andrés Serna, Nicolas Guio, Daniel Segura, Juan Pa
 
 **Descripción de la Solución: Automatización de Procesos de Pick & Place**
 
-Para abordar el problema de optimizar los procesos de alistamiento de pedidos mediante la implementación de un sistema robotizado, se ha desarrollado una solución integral que combina la automatización de tareas, el diseño de herramientas especializadas y la creación de una interfaz humano-máquina (HMI) para facilitar la interacción y supervisión del sistema. Para esto se utilizará el robot ABB IBR40  del laboratoria LabSir
+Para abordar el problema de optimizar los procesos de alistamiento de pedidos mediante la implementación de un sistema robotizado, se ha desarrollado una solución integral que combina la automatización de tareas, el diseño de herramientas especializadas y la creación de una interfaz humano-máquina (HMI) para facilitar la interacción y supervisión del sistema. Para esto se utilizará el robot ABB IBR40  del laboratorio LabSir.
 
 ![Unbenannt](https://github.com/JuanPabloOrt/Proyecto_final_Robotica/assets/144562439/a5cd322e-e618-4b76-bb01-ab68db37b406)
 
