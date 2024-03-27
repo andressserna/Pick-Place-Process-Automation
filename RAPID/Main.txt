@@ -1,0 +1,302 @@
+MODULE Module1
+        CONST robtarget Home_10:=[[501.173,11.341,677.091],[0.707106781,0,0.707106781,0],[0,-2,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_10:=[[263.333,480.502,105.581],[1,0,0,0],[0,0,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_20:=[[260.345,275.616,105.581],[1,0,0,0],[-1,-1,0,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_30:=[[257.091,80.705,105.144],[1,0,0,0],[-1,-1,0,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_40:=[[582.098,476.831,105.581],[1,0,0,0],[0,0,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_50:=[[578.683,274.064,105.58],[1,0,0,0],[-1,-1,0,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_60:=[[575.029,74.374,105.581],[1,0,0,0],[-1,-1,0,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_70:=[[150.829,-50.967,76.612],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_80:=[[302.22,-50.937,74.173],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_90:=[[451.963,-50.925,73.24],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_100:=[[263.333,480.502,-141.324240659],[1,0,0,0],[0,0,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Punto_Devuelta:=[[66.617802995,308.662466267,-216.296274846],[1,0,0,0],[-1,-2,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_110:=[[260.345,275.616,-144.639114065],[1,0,0,0],[-1,-1,0,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST jointtarget JointTarget_1:=[[0,0,0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_120:=[[257.091,80.705,-159.482998717],[1,0,0,0],[-1,-1,0,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_130:=[[582.098,476.831,-161.183036287],[1,0,0,0],[0,0,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_140:=[[578.683,274.064,-123.715275576],[1,0,0,0],[-1,-1,0,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_150:=[[575.029,74.374,-99.910539128],[1,0,0,0],[-1,-1,0,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Punto_devuelta2:=[[-227.611866197,143.100810606,-528.884510952],[0.705731727,-0.708281257,-0.008329583,-0.014526109],[0,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_190:=[[-176.858411266,-106.201518935,73.880609593],[1,0,0,0],[-1,0,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_160:=[[-55.22,-107.254,79.784],[1,0,0,0],[-1,0,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_200:=[[-167.352785471,-255.821123819,72.40403251],[1,0,0,0],[-1,0,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_170:=[[-56.417,-256.781,77.788],[1,0,0,0],[-1,0,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_210:=[[-182.360011573,-406.743196413,73.215574984],[1,0,0,0],[-2,-1,0,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_180:=[[-57.795,-407.821,79.261],[1,0,0,0],[-2,-1,0,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    VAR num pos1:=0;
+    VAR num pos2:=0;
+    VAR num pos3:=0;
+    VAR num con:=0;
+    PERS bool trayectoriaA1 :=FALSE;
+    PERS bool trayectoriaA2 :=FALSE ;
+    PERS bool trayectoriaA3 :=FALSE;
+    PERS bool trayectoriaB1 :=FALSE;
+    PERS bool trayectoriaB2 :=FALSE;
+    PERS bool trayectoriaB3 :=FALSE;
+    PERS bool DispA1:=TRUE;
+    PERS bool DispA2:=True;
+    PERS bool DispA3:=TRUE;
+    PERS bool DispB1:=TRUE;
+    PERS bool DispB2:=TRUE;
+    PERS bool DispB3:=TRUE;
+    PERS bool Banda1:=FALSE;
+    PERS bool Banda2:=FALSE;
+    PERS bool Banda3:=FALSE;
+    PERS bool reset:=TRUE;
+
+!***********************************************************
+    !
+    ! M?dulo:  Module1
+    !
+    ! Descripción:
+    !   <Introduzca la descripción aquí>
+    !
+    ! Autor: Daniel Segura
+    !
+    ! Versión: 1.0
+    !
+    !***********************************************************
+    
+    
+    !***********************************************************
+    !
+    ! Procedimiento Main
+    !
+    !   Este es el punto de entrada de su programa
+    !
+    !***********************************************************
+    PROC main()
+        
+        Home;
+       
+
+        WHILE con<3 DO
+                IF trayectoriaA1=TRUE THEN
+                   con:=con+1;
+                   A1;
+                   DispA1:=FALSE;
+                   trayectoriaA1:=FALSE;
+                   Posiciones;
+                ELSE
+                    IF trayectoriaA2=TRUE THEN
+                       con:=con+1;
+                       A2;
+                       DispA2:=FALSE;
+                       trayectoriaA2:=FALSE;
+                       Posiciones;
+                    ELSE
+                        IF trayectoriaA3=TRUE THEN
+                           con:=con+1;
+                           DispA3:=FALSE;
+                           A3;
+                           trayectoriaA3:=FALSE;
+                           Posiciones;
+                        ELSE
+                            IF trayectoriaB1=TRUE THEN
+                               con:=con+1;
+                               DispB1:=FALSE;
+                               B1;
+                               trayectoriaB1:=FALSE;
+                               Posiciones;
+                            ELSE
+                                IF trayectoriaB2=TRUE THEN
+                                   con:=con+1;
+                                   DispB2:=FALSE;
+                                   B2;
+                                   trayectoriaB2:=FALSE;
+                                   Posiciones;
+                                ELSE
+                                    IF trayectoriaB3=TRUE THEN
+                                       con:=con+1;
+                                       DispB3:=FALSE;
+                                       B3;
+                                       trayectoriaB3:=FALSE;
+                                       Posiciones;
+                                    ENDIF
+                                ENDIF
+                            ENDIF
+                        ENDIF
+                    ENDIF
+                ENDIF
+            ENDWHILE
+    ENDPROC
+        
+
+    PROC A1()
+        SetDO DO_01, 0;
+        SetDO DO_02, 0;
+        SetDO DO_01, 1;
+        SetDO DO_01,0;
+        MoveJ Punto_Devuelta,v100,z5,tool0\WObj:=wobj_Estante;
+        MoveJ Target_100,v100,z5,tool0\WObj:=wobj_Estante;
+        MoveJ Target_10,v100,z5,tool0\WObj:=wobj_Estante;
+        WaitTime 3;
+        SetDO DO_02,1;
+        WaitTime 3;
+        SetDO DO_02,0;
+        MoveJ Target_100,v100,z5,tool0\WObj:=wobj_Estante;
+        MoveJ Punto_Devuelta,v100,z5,tool0\WObj:=wobj_Estante;
+    ENDPROC
+    PROC A2()
+        SetDO DO_01, 0;
+        SetDO DO_02, 0;
+        SetDO DO_01, 1;
+        SetDO DO_01,0;
+        MoveJ Punto_Devuelta,v100,z5,tool0\WObj:=wobj_Estante;
+        MoveJ Target_110,v100,z5,tool0\WObj:=wobj_Estante;
+        MoveJ Target_20,v100,z5,tool0\WObj:=wobj_Estante;
+       SetDO DO_02,1;
+        WaitTime 3;
+        SetDO DO_02,0;
+        WaitTime 3;
+        MoveJ Target_110,v100,z5,tool0\WObj:=wobj_Estante;
+        MoveJ Punto_Devuelta,v100,z5,tool0\WObj:=wobj_Estante;
+    ENDPROC
+    PROC A3()
+        SetDO DO_01, 0;
+        SetDO DO_02, 0;
+        SetDO DO_01, 1;
+        SetDO DO_01,0;
+        MoveJ Punto_Devuelta,v100,z5,tool0\WObj:=wobj_Estante;
+        MoveJ Target_120,v100,z5,tool0\WObj:=wobj_Estante;
+        MoveJ Target_30,v100,z5,tool0\WObj:=wobj_Estante;
+        SetDO DO_02,1;
+        WaitTime 3;
+        SetDO DO_02,0;
+        WaitTime 3;
+        MoveJ Target_120,v100,z5,tool0\WObj:=wobj_Estante;
+        MoveJ Punto_Devuelta,v100,z5,tool0\WObj:=wobj_Estante;
+    ENDPROC
+    PROC B1()
+        SetDO DO_01, 0;
+        SetDO DO_02, 0;
+        SetDO DO_01, 1;
+        SetDO DO_01,0;
+        MoveJ Punto_Devuelta,v100,z5,tool0\WObj:=wobj_Estante;
+        MoveJ Target_130,v100,z5,tool0\WObj:=wobj_Estante;
+        MoveJ Target_40,v100,z5,tool0\WObj:=wobj_Estante;
+        SetDO DO_02,1;
+        WaitTime 3;
+        SetDO DO_02,0;
+        WaitTime 3;
+        MoveJ Target_130,v100,z5,tool0\WObj:=wobj_Estante;
+        MoveJ Punto_Devuelta,v100,z5,tool0\WObj:=wobj_Estante;
+    ENDPROC
+    PROC B2()
+        SetDO DO_01, 0;
+        SetDO DO_02, 0;
+        SetDO DO_01, 1;
+        SetDO DO_01,0;
+        MoveJ Punto_Devuelta,v100,z5,tool0\WObj:=wobj_Estante;
+        MoveJ Target_140,v100,z5,tool0\WObj:=wobj_Estante;
+        MoveJ Target_50,v100,z5,tool0\WObj:=wobj_Estante;
+        SetDO DO_02,1;
+        WaitTime 3;
+        SetDO DO_02,0;
+        WaitTime 3;
+        MoveJ Target_140,v100,z5,tool0\WObj:=wobj_Estante;
+        MoveJ Punto_Devuelta,v100,z5,tool0\WObj:=wobj_Estante;
+    ENDPROC
+    PROC B3()
+        SetDO DO_01, 0;
+        SetDO DO_02, 0;
+        SetDO DO_01, 1;
+        SetDO DO_01,0;
+        MoveJ Punto_Devuelta,v100,z5,tool0\WObj:=wobj_Estante;
+        MoveJ Target_150,v100,z5,tool0\WObj:=wobj_Estante;
+        MoveJ Target_60,v100,z5,tool0\WObj:=wobj_Estante;
+        SetDO DO_02,1;
+        WaitTime 3;
+        SetDO DO_02,0;
+        WaitTime 3;
+        MoveJ Target_150,v100,z5,tool0\WObj:=wobj_Estante;
+        MoveJ Punto_Devuelta,v100,z5,tool0\WObj:=wobj_Estante;
+    ENDPROC
+    PROC C1()
+        MoveJ Target_70,v100,z5,tool0\WObj:=wobj_Banda;
+    ENDPROC
+    PROC C2()
+        MoveJ Target_80,v100,z5,tool0\WObj:=wobj_Banda;
+    ENDPROC
+    PROC C3()
+        MoveJ Target_90,v100,z5,tool0\WObj:=wobj_Banda;
+    ENDPROC
+    PROC Home()
+        MoveAbsJ JointTarget_1,v1000,z100,tool0\WObj:=wobj0;
+
+    ENDPROC
+    PROC P1()
+        MoveJ Punto_devuelta2,v100,z5,tool0\WObj:=wobj_Banda;
+        MoveJ Target_190,v100,z5,tool0\WObj:=wobj_Banda;
+        MoveJ Target_160,v100,z5,tool0\WObj:=wobj_Banda;
+        SetDO DO_01, 0;
+        SetDO DO_02, 0;
+        SetDO DO_01,1;
+        WaitTime 2;
+        MoveJ Target_190,v100,z5,tool0\WObj:=wobj_Banda;
+        SetDO DO_01,0;
+        MoveJ Punto_devuelta2,v100,z5,tool0\WObj:=wobj_Banda;
+        Banda1:=TRUE;
+    ENDPROC
+    PROC P2()
+        MoveJ Punto_devuelta2,v100,z5,tool0\WObj:=wobj_Banda;
+        MoveJ Target_200,v100,z5,tool0\WObj:=wobj_Banda;
+        MoveJ Target_170,v100,z5,tool0\WObj:=wobj_Banda;
+        SetDO DO_01, 0;
+        SetDO DO_02, 0;
+        SetDO DO_01,1;
+        WaitTime 2;
+        MoveJ Target_200,v100,z5,tool0\WObj:=wobj_Banda;
+        SetDO DO_01,0;
+        MoveJ Punto_devuelta2,v100,z5,tool0\WObj:=wobj_Banda;
+        Banda2:=TRUE;
+    ENDPROC
+    PROC P3()
+        MoveJ Punto_devuelta2,v100,z5,tool0\WObj:=wobj_Banda;
+        MoveJ Target_210,v100,z5,tool0\WObj:=wobj_Banda;
+        MoveJ Target_180,v100,z5,tool0\WObj:=wobj_Banda;
+        SetDO DO_01, 0;
+        SetDO DO_02, 0;
+        SetDO DO_01,1;
+        WaitTime 2;
+        MoveJ Target_210,v100,z5,tool0\WObj:=wobj_Banda;
+        SetDO DO_01,0;
+        MoveJ Punto_devuelta2,v100,z5,tool0\WObj:=wobj_Banda;
+        Banda3:=TRUE;
+        WaitTime 10;
+        trayectoriaA1 :=FALSE;
+        trayectoriaA2 :=FALSE ;
+        trayectoriaA3 :=FALSE;
+        trayectoriaB1 :=FALSE;
+        trayectoriaB2 :=FALSE;
+        trayectoriaB3 :=FALSE;
+        DispA1:=true;
+        DispA2:=TRUE;
+        DispA3:=TRUE;
+        DispB1:=TRUE;
+        DispB2:=TRUE;
+        DispB3:=TRUE;
+        Banda1:=FALSE;
+        Banda2:=FALSE;
+        Banda3:=FALSE;
+        con:=0;
+        pos1:=0;
+        pos2:=0;
+        pos3:=0;
+    ENDPROC
+    PROC Posiciones()
+        IF pos1=0 THEN 
+            P1;
+            pos1:=1;
+        ELSE
+            IF pos2=0 THEN
+                P2;
+                pos2:=1;
+            ELSE 
+                P3;
+                pos3:=1;
+            ENDIF
+        ENDIF
+    ENDPROC  
+ENDMODULE
